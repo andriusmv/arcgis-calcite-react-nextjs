@@ -32,13 +32,13 @@ export default function Home() {
   }, [mapDiv]);
 
   return (
-    <div className="h-full w-full">
+    <div>
       <CalciteShell id="mainCalciteShell">
         <CalciteShellPanel
           width-scale="1"
-          slot="panel-start"
-          position="start"
-          id="left-shell-panel"
+          slot="panel-end"
+          position="end"
+          id="right-shell-panel"
           displayMode="dock"
         >
           <CalciteActionBar slot="action-bar">
