@@ -35,6 +35,22 @@ export async function init(container: HTMLDivElement) {
     zoom: 1,
   });
 
+  const trailsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trails/FeatureServer/0",
+  });
+
+  const trailheadsLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0",
+  });
+
+  const parksLayer = new FeatureLayer({
+    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Parks_and_Open_Space/FeatureServer/0",
+  });
+
+  map.add(trailsLayer, 0);
+  map.add(trailheadsLayer);
+  map.add(parksLayer, 0);
+
   app.view = view;
   app.map = map;
   app.layer = layer;
